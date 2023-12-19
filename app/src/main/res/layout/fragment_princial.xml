@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".princial"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imagenTop"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/foto_lorenzo"
+        android:textAlignment="center">
+    </ImageView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imagenTop">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="20dp">
+
+            <TextView
+                android:id="@+id/textoIMC"
+                android:textSize="35dp"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IMC ACTUAL"
+                android:textColor="@color/black"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/textoIMC">
+
+                <EditText
+                    android:id="@+id/peso"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:hint="PESO"
+                    android:inputType="numberDecimal"/>
+                <EditText
+                    android:id="@+id/altura"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:hint="ALTURA"
+                    android:inputType="numberDecimal"/>
+                <EditText
+                    android:id="@+id/edad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:hint="EDAD"
+                    android:inputType="number"/>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
