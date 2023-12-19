@@ -11,13 +11,13 @@
     <ImageView
         android:id="@+id/imagenTop"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="400dp"
         android:src="@drawable/foto_lorenzo"
         android:textAlignment="center">
     </ImageView>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_below="@id/imagenTop">
 
         <androidx.cardview.widget.CardView
@@ -25,59 +25,95 @@
             android:layout_height="match_parent"
             app:cardCornerRadius="20dp">
 
-            <TextView
-                android:id="@+id/textoIMC"
-                android:textSize="35dp"
-                android:textAlignment="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="IMC ACTUAL"
-                android:textColor="@color/black"
-                />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="200dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_below="@id/textoIMC">
+                <TextView
+                    android:id="@+id/textoIMC"
+                    android:textSize="35dp"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="IMC ACTUAL"
+                    android:textColor="@color/black" />
 
                 <EditText
                     android:id="@+id/peso"
-                    android:layout_width="0dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/textoIMC"
+                    android:layout_marginStart="20dp"
+                    android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:layout_margin="5dp"
                     android:background="@color/white"
-                    android:textColor="@color/black"
                     android:hint="PESO"
-                    android:inputType="numberDecimal"/>
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black" />
+
                 <EditText
                     android:id="@+id/altura"
-                    android:layout_width="0dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/textoIMC"
+                    android:layout_margin="20dp"
+                    android:layout_toRightOf="@id/peso"
                     android:layout_weight="1"
-                    android:layout_margin="5dp"
                     android:background="@color/white"
-                    android:textColor="@color/black"
                     android:hint="ALTURA"
-                    android:inputType="numberDecimal"/>
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black" />
+
                 <EditText
                     android:id="@+id/edad"
-                    android:layout_width="0dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/textoIMC"
+                    android:layout_margin="20dp"
+                    android:layout_toRightOf="@id/altura"
                     android:layout_weight="1"
-                    android:layout_margin="5dp"
                     android:background="@color/white"
-                    android:textColor="@color/black"
                     android:hint="EDAD"
-                    android:inputType="number"/>
+                    android:inputType="number"
+                    android:textColor="@color/black" />
 
+                <Button
+                    android:id="@+id/botonIMC"
+                    android:layout_below="@id/edad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IMC"
+                    android:layout_gravity="end">
+                </Button>
 
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/textoo"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/edad"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@id/botonIMC"
+                    android:text="Tu IMC es de:"
+                    android:textColor="@color/black">
 
+                </TextView>
+
+                <TextView
+                    android:id="@+id/resultado"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@id/textoo"
+                    android:layout_marginTop="110dp"
+                    android:layout_marginLeft="30dp">
+                </TextView>
+            </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </RelativeLayout>
