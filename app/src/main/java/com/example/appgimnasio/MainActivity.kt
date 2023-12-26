@@ -22,14 +22,13 @@ class MainActivity : AppCompatActivity() {
             fragmentTransaction.commit()
         }
 
-        val boton_ejercicios = findViewById<ImageButton>(R.id.boton2)
-        val boton_estadisticas = findViewById<ImageButton>(R.id.boton3)
+        val bEjercicios = findViewById<ImageButton>(R.id.boton2)
+        val bAnaliticas = findViewById<ImageButton>(R.id.boton3)
 
-        boton_ejercicios.setOnClickListener { cargarFragment(1) }
-        boton_estadisticas.setOnClickListener { cargarFragment(2) }
-
-
+        bEjercicios.setOnClickListener { cargarFragment(1) }
+        bAnaliticas.setOnClickListener { cargarFragment(2) }
     }
+
 
     fun cargarFragment(numF: Int) {
         val fragmentTransaction = fragmentManager.beginTransaction()
@@ -42,6 +41,4 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.addToBackStack(null)
         fragmentTransaction.commit()
     }
-
-
 }

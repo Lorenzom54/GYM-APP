@@ -36,7 +36,7 @@ class Principal : Fragment() {
 
                 resultado.text = imcFormat
             } else {
-                resultado.text = "Ingrese valores válidos para peso y altura"
+                resultado.text = "Valores incorrectos(Introduzca de nuevo los valores)"
             }
         }
         return vista
